@@ -1,0 +1,17 @@
+[project]
+name = "gpt-oss-20b-google-cloud"
+version = "0.1.0"
+description = "Python client for GPT-OSS-20B via Google Cloud Vertex AI"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0.0",
+    "google-auth>=2.0.0",
+    "google-auth-httplib2>=0.1.0",
+    "requests>=2.0.0",
+    "tqdm>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]

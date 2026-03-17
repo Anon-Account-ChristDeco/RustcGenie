@@ -1,0 +1,3 @@
+[submodule "vendor/icemaker"]
+	path = vendor/icemaker
+	url = https://github.com/matthiaskrgr/icemaker

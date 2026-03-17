@@ -1,0 +1,4 @@
+[workspace]
+members = ["crates/*"]
+exclude = ["vendor/icemaker"]
+resolver = "3"

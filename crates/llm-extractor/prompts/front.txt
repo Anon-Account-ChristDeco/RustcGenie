@@ -1,0 +1,22 @@
+Perform the task description below and write the output JSON object. The Rust code will be given after the task description.
+
+1. Collect declaration or definition code structures as **intro-structures** from the input Rust source code. For example, specific feature gates, use(import) lines, trait, impl, function, module, macros, or type stubs are intro-structures.
+
+2. For every code structures in intro-structures, collect every verbatim code from the input Rust code that satisfies any of the following criteria or infer every verbatim, as **fragments**:
+i) An identifier itself which is defined by one of intro-structures. Parameters are not allowed.
+ii) A symbol or an identifier itself whose global usage is available by one of intro-structures (this includes feature-enabled constructs that appear in the code).
+iii) A feature-enabled syntactic constructs (for feature intro-structure)
+iv) Minimal usage snippet for a defined identifier brought by the first criterion - the smallest self-contained AST node that demonstrates that use; typically an expression/path/type/minimal item, and statement or block are not recommended unless that is the minimal form.
+v) Minimal usage snippet that is available by the second or third criterion - the smallest AST node that demonstrates that use; typically an expression/path/type/minimal item, and statement or block are not recommended unless that is the minimal form.
+vi) Distinctive construct - any snippet whose surface form is notably distinctive.
+
+3. For each fragment in fragments set, note which criterion is satisfied, from "1", "2", "3", "4", "5", "6", as **criterion**.
+
+4. For each fragment in fragments set, collect the smallest set of every intro-structure needed so that the fragment could be compiled (or type-checked) in a fresh file, as **dependencies**.
+
+5. For each fragment in fragments set, collect every non-distinctive sub-fragment in the fragment (e.g., lifetimes `'a`, primitive types like `()` or `i32`, literal shapes like `&()`, variable names, `todo` closures), as **placeholders**.
+
+
+## Input Rust Code:
+
+```

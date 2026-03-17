@@ -1,0 +1,9 @@
+# Python specific ignores
+__pycache__/
+
+# Rust/Cargo specific ignores
+/target
+
+
+# Project specific ignores
+tmp/*

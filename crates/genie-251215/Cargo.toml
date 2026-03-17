@@ -1,0 +1,13 @@
+[package]
+name = "genie-251215"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+component-extractor = { path = "../component-extractor" }
+fastrand = "2"
+llm-extractor = { path = "../llm-extractor" }
+serde_json = "1"
+tree-sitter = "0.24"
+walkdir = "2"

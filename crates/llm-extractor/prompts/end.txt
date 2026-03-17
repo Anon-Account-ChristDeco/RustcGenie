@@ -1,0 +1,28 @@
+```
+
+## Output Format:
+
+Return **only** a pretty-printed JSON dictionary that contains two arrays, an **intro-structures** array, and an array of **fragments** with each fragment description.
+
+```json
+{
+  "intro-structures": string[],
+  "fragments": [
+    {
+      "fragment": string,
+      "criteria": string,
+      "dependencies": string[],
+      "placeholders": string[]
+    },
+    ...
+  ]
+}
+```
+
+* intro-structures should be verbatim string.
+* criterion should be the string of the single number.
+* Output only JSON. No prose, no code fences, no comments.
+* Use double quotes.
+* Preserve line breaks inside string values with `\n`.
+* Keep each elements as single strings each.
+
