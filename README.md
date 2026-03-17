@@ -22,7 +22,7 @@ cargo build --release
 
 ## Data
 
-Two data archives are provided with this artifact:
+Two data archives are provided in the [v1.0.0 release](https://github.com/Anon-Account-ChristDeco/RustcGenie/releases/tag/v1.0.0):
 
 | Archive | Contents | Used by |
 |---------|----------|---------|
